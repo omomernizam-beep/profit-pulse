@@ -1,0 +1,9 @@
+# GitHub Pages Configuration
+
+title: Profit Pulse
+subtitle: Your subtitle goes here.
+baseurl: "/"
+url: "http://yourwebsite.com"
+
+# Build settings
+markdown: kramdown
