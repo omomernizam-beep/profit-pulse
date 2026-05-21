@@ -1,11 +1,86 @@
-/* styles for ProfitPulse website */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    overflow: hidden;
 }
 
-h1, h2, h3 {
-    color: #333;
+.slideshow {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
 }
 
-/* Other styles */
+.slide {
+    position: absolute;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active { opacity: 1; }
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.login-box, .dashboard-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+input, select, textarea {
+    padding: 12px;
+    margin: 10px 0;
+    width: 280px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover { background: #0056b3; transform: scale(1.05); }
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 400px;
+    line-height: 1.6;
+}/* Trademark Styling */
+p span {
+    text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+    transition: 0.3s;
+}
+
+p span:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px #00ffcc;
+}

@@ -2,35 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ProfitPulse - AI Business Analyzer. Generate business roadmaps, get investment insights, and find the best locations for your startup.">
-    <meta name="keywords" content="business analyzer, startup, investment, entrepreneurship, business ideas">
-    <meta name="author" content="ProfitPulse">
-    <meta property="og:title" content="ProfitPulse - AI Business Analyzer">
-    <title>ProfitPulse - AI Business Analyzer</title>
+    <title>ProfitPulse - Strategic Login</title>
     <link rel="stylesheet" href="style.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 </head>
-<body class="login-bg">
-    <div class="login-box">
-        <h1>ProfitPulse</h1>
-        <p class="tagline">Your AI Business Analyzer</p>
-        <input id="email" type="email" placeholder="Enter Email" required>
-        <input id="password" type="password" placeholder="Password" required>
-        <button onclick="login()">Login</button>
-        <button onclick="goToSignup()">Sign Up</button>
-        <hr>
-        <button class="google" onclick="loginGoogle()">Continue with Google</button>
-        <button class="facebook" onclick="loginFacebook()">Continue with Facebook</button>
-        <p class="forgot-password"><a href="forgot-password.html">Forgot Password?</a></p>
+<body>
+    <div class="slideshow">
+        <img src="slide1.jpg" class="slide active">
+        <img src="slide2.jpg" class="slide">
     </div>
 
-    <div class="watermark">
-        <p>CREATED BY FLANKER DELTA</p>
-        <p>© 2026 All Rights Reserved</p>
-    </div>
+    <div class="overlay">
+        <h1 style="color: #00ffcc; font-size: 3rem;">ProfitPulse</h1>
+        <p style="color: #ccc; margin-bottom: 30px;">"Connecting Founders with Capital"</p>
 
+        <div style="display: flex; gap: 40px; padding: 40px; background: rgba(0,0,0,0.7); border-radius: 20px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1);">
+            <div style="text-align: center; width: 250px;">
+                <h2 style="color: #00d4ff;">Founders</h2>
+                <input id="email-e" placeholder="Email" style="width: 90%; margin-bottom: 10px;">
+                <input id="pass-e" type="password" placeholder="Password" style="width: 90%; margin-bottom: 10px;">
+                <button onclick="login('entrepreneur')" style="width: 100%; background: #007bff; border: none; padding: 12px; color: white; border-radius: 5px; cursor: pointer;">Login as Founder</button>
+            </div>
+
+            <div style="width: 1px; background: rgba(255,255,255,0.2);"></div>
+
+            <div style="text-align: center; width: 250px;">
+                <h2 style="color: #2ecc71;">Investors</h2>
+                <input id="email-i" placeholder="Email" style="width: 90%; margin-bottom: 10px;">
+                <input id="pass-i" type="password" placeholder="Password" style="width: 90%; margin-bottom: 10px;">
+                <button onclick="login('investor')" style="width: 100%; background: #28a745; border: none; padding: 12px; color: white; border-radius: 5px; cursor: pointer;">Login as Investor</button>
+            </div>
+        </div>
+    </div>
     <script src="auth.js"></script>
-    <script src="cookie-handler.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
